@@ -47,9 +47,9 @@ const LandingSection = () => {
           Feel Confident in your skin Again
         </h1>
         <p className='font-body ml-auto text-right static md:absolute w-2/3 md:w-70 mt-10 md:mt-0 md:right-[5%] md:top-full md:-translate-y-[100%] text-base md:text-lg'>
-        <span>
-          World-class technology, proven products, and care that's personal.
-        </span>
+          <span>
+            World-class technology, proven products, and care that's personal.
+          </span>
         </p>
       </div>
       <div className='relative'>

@@ -93,7 +93,7 @@ const AnimatedText = ({
             <span
                 ref={textRef}
                 className={className}
-                style={{ 
+                style={{
                     display: 'inline-block',
                     opacity: isVisible ? 1 : 0
                 }}

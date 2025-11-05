@@ -4,8 +4,8 @@ import CountUp from '../../../hooks/animation/CountUp';
 const DoctorSection = () => {
     return (
         <section className='mt-16 md:mt-30 px-4 md:px-14'>
-                        <div className='relative w-full h-[20rem] md:h-[30rem] rounded-xl overflow-hidden'>
-                <img className='w-full h-full object-cover object-top' src="/images/doctors.jpeg" alt="Dr. Mayank and Dr. Nitya - Internationally trained dermatologists" />
+            <div className='rounded-[20px] md:rounded-[30px] overflow-hidden h-[30vh] sm:h-[40vh] md:h-[45rem]'>
+                <img className='w-full h-full object-cover object-top' src="/src/assets/images/doctors.jpeg" alt="Dr. Mayank and Dr. Nitya - Internationally trained dermatologists" />
             </div>
             <div className='flex flex-col md:flex-row mt-12 md:mt-30 gap-8 md:gap-0 md:justify-between w-full'>
                 <div className='w-full md:w-[35%] capitalize font-semibold text-lg sm:text-xl md:text-2xl'>
