@@ -1,6 +1,6 @@
 
 import React from 'react'
-import ScrollFloat from '../../../hooks/animation/scrollFloat'
+import ScrollFloat from '../../../hooks/animation/ScrollFloat'
 
 const CTA = () => {
     return (
