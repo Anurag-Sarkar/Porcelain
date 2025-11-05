@@ -54,7 +54,7 @@ const LandingSection = () => {
       </div>
       <div className='relative'>
         <div className='w-screen'>
-          <img className='w-full object-cover h-[30vh] md:h-auto' src="/src/assets/images/girl-skin.png" alt="Confident woman with beautiful skin" />
+          <img className='w-full object-cover h-[30vh] md:h-auto' src="/images/girl-skin.png" alt="Confident woman with beautiful skin" />
         </div>
         <div className='absolute -translate-x-[50%] -translate-y-[50%] left-1/2 top-1/2 w-screen overflow-hidden'>
           <MarqueeScroll
