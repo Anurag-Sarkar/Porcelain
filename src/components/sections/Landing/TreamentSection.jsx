@@ -12,7 +12,7 @@ const TreamentSection = () => {
     { name: 'Oxy Dome', image: 'https://images.unsplash.com/photo-1761718209694-70031ee64f82?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDV8fHNraW4lMjB0cmVhdG1lbnR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=900' },
     { name: 'Red Carpet', image: 'https://images.unsplash.com/photo-1555820585-c5ae44394b79?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c2tpbiUyMHRyZWF0bWVudHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=900' },
     { name: 'K18 Peptide', image: 'https://plus.unsplash.com/premium_photo-1661476179686-80c9122da693?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2tpbiUyMHRyZWF0bWVudHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=900' },
-    { name: 'Biomoduling Skin Booster', image: 'https://plus.unsplash.com/premium_photo-1664299995993-ebfac0a1b66b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHNraW4lMjB0cmVhdG1lbnR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=900' },
+    { name: 'Skin Booster', image: 'https://plus.unsplash.com/premium_photo-1664299995993-ebfac0a1b66b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHNraW4lMjB0cmVhdG1lbnR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=900' },
   ]
 
   return (
@@ -22,7 +22,7 @@ const TreamentSection = () => {
       </h1>
 
       {/* Mobile/Tablet Carousel */}
-      <div className='block lg:hidden relative w-full'>
+      <div className='block md:hidden relative w-full'>
         <Swiper
           modules={[Pagination, Autoplay]}
           spaceBetween={20}
@@ -85,13 +85,13 @@ const TreamentSection = () => {
       </div>
 
       {/* Desktop Grid */}
-      <div className='hidden lg:block mx-4 md:mx-14'>
-        <div className='grid grid-cols-3 gap-8 mb-12'>
+      <div className='hidden md:block mx-2 md:mx-8 lg:mx-14'>
+        <div className='grid grid-cols-3 gap-4 md:gap-6 lg:gap-8 mb-8 md:mb-10 lg:mb-12'>
           {treatments.slice(0, 3).map((treatment, index) => (
             <div key={index} className="group cursor-pointer w-full">
-              <div className="flex items-center gap-4 mb-5 w-max">
+              <div className="flex items-center gap-2 md:gap-3 lg:gap-4 mb-3 md:mb-4 lg:mb-5 w-max">
                 <div className="w-fit">
-                  <p className="text-2xl font-light">{treatment.name}</p>
+                  <p className="text-lg md:text-[1.8vw] font-light">{treatment.name}</p>
                   <div
                     className="w-full h-[1px] bg-black origin-left
                        scale-x-0 group-hover:scale-x-100
@@ -101,16 +101,16 @@ const TreamentSection = () => {
 
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="32" height="32" viewBox="0 0 24 24" fill="none"
+                  width="24" height="24" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"
-                  className="transition-transform duration-500 ease-out group-hover:-rotate-45"
+                  className="md:w-7 md:h-7 lg:w-8 lg:h-8 transition-transform duration-500 ease-out group-hover:-rotate-45"
                 >
                   <path d="M5 12h14" />
                   <path d="m12 5 7 7-7 7" />
                 </svg>
               </div>
 
-              <div className="aspect-[2/3] h-[35rem] overflow-hidden rounded-lg">
+              <div className="aspect-[2/3] w-[20vw] md:w-[25vw] lg:w-[25vw] overflow-hidden rounded-lg">
                 <img
                   src={treatment.image}
                   alt={`${treatment.name} treatment`}
@@ -124,12 +124,12 @@ const TreamentSection = () => {
           ))}
         </div>
 
-        <div className='grid grid-cols-3 gap-8'>
+        <div className='grid grid-cols-3 gap-4 md:gap-6 lg:gap-8'>
           {treatments.slice(3, 6).map((treatment, index) => (
             <div key={index + 3} className="group cursor-pointer w-full">
-              <div className="flex items-center gap-4 mb-5 w-max">
+              <div className="flex items-center gap-2 md:gap-3 lg:gap-4 mb-3 md:mb-4 lg:mb-5 w-max">
                 <div className="w-fit">
-                  <p className="text-2xl font-light">{treatment.name}</p>
+                  <p className="text-lg md:text-xl lg:text-2xl font-light">{treatment.name}</p>
                   <div
                     className="w-full h-[1px] bg-black origin-left
                        scale-x-0 group-hover:scale-x-100
@@ -139,16 +139,16 @@ const TreamentSection = () => {
 
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="32" height="32" viewBox="0 0 24 24" fill="none"
+                  width="24" height="24" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"
-                  className="transition-transform duration-500 ease-out group-hover:-rotate-45"
+                  className="md:w-7 md:h-7 lg:w-8 lg:h-8 transition-transform duration-500 ease-out group-hover:-rotate-45"
                 >
                   <path d="M5 12h14" />
                   <path d="m12 5 7 7-7 7" />
                 </svg>
               </div>
 
-              <div className="aspect-[2/3] h-[35rem] overflow-hidden rounded-lg">
+              <div className="aspect-[2/3] w-[20vw] md:w-[25vw] lg:w-[25vw] overflow-hidden rounded-lg">
                 <img
                   src={treatment.image}
                   alt={`${treatment.name} treatment`}
