@@ -1,0 +1,119 @@
+/* Custom Swiper Styles for Treatment Section */
+
+.treatment-swiper {
+    padding-bottom: 3rem;
+}
+
+.treatment-swiper .swiper-button-next,
+.treatment-swiper .swiper-button-prev {
+    color: #1a365d;
+    background: rgba(255, 255, 255, 0.9);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.treatment-swiper .swiper-button-next:hover,
+.treatment-swiper .swiper-button-prev:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
+}
+
+.treatment-swiper .swiper-button-next::after,
+.treatment-swiper .swiper-button-prev::after {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.treatment-swiper .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: #d4b896;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.treatment-swiper .swiper-pagination-bullet-active {
+    background: #1a365d;
+    opacity: 1;
+    width: 32px;
+    border-radius: 6px;
+}
+
+/* Centered Swiper Styles */
+.treatment-swiper-centered {
+    padding-bottom: 4rem;
+    width: 100%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    overflow: hidden;
+}
+
+.treatment-swiper-centered .swiper {
+    overflow: visible;
+}
+
+.treatment-swiper-centered .swiper-wrapper {
+    align-items: center;
+    display: flex;
+    transition-timing-function: ease-in-out;
+    justify-content: flex-start;
+}
+
+.treatment-swiper-centered .swiper-slide {
+    width: 280px !important;
+    flex-shrink: 0;
+    opacity: 0.4;
+    transform: scale(0.85);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.treatment-swiper-centered .swiper-slide-active {
+    opacity: 1 !important;
+    transform: scale(1) !important;
+    z-index: 10;
+}
+
+.treatment-swiper-centered .swiper-slide-next,
+.treatment-swiper-centered .swiper-slide-prev {
+    opacity: 0.6;
+    transform: scale(0.9);
+}
+
+.treatment-swiper-centered .swiper-pagination {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    text-align: center;
+}
+
+.treatment-swiper-centered .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: #d4b896;
+    opacity: 0.4;
+    transition: all 0.3s ease;
+    margin: 0 6px;
+}
+
+.treatment-swiper-centered .swiper-pagination-bullet-active {
+    background: #1a365d;
+    opacity: 1;
+    width: 28px;
+    border-radius: 5px;
+}
+
+/* Responsive widths */
+@media (min-width: 640px) {
+    .treatment-swiper-centered .swiper-slide {
+        width: 350px !important;
+    }
+}

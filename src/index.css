@@ -1,0 +1,95 @@
+@import "tailwindcss";
+*{
+  user-select: none;
+}
+html,body{
+  height: 100%;
+  width: 100%;
+  font-family: "Gilroy", system-ui, sans-serif;
+  background-color: var(--color-ivory);
+}
+
+@font-face {
+  font-family: "Saraswati";
+  src: url("/src/assets/fonts/Sarasvati.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Deutschlander";
+  src: url("/src/assets/fonts/Deutschlander.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Ralgine";
+  src: url("/src/assets/fonts/Ralgine.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("/src/assets/fonts/Gilroy-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("/src/assets/fonts/Gilroy-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/src/assets/fonts/Gilroy-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/src/assets/fonts/Gilroy-Semibold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/src/assets/fonts/Gilroy-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/src/assets/fonts/Gilroy-ExtraBold.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  /* 🎨 Porcelain Brand Colors */
+  --color-deep-blue: #1E2D44;   /* Headings, text, contrast */
+  --color-accent-blue: #1C3F7C;   /* Headings, text, contrast */
+  --color-royal-blue: #4A90E2;  /* Primary accent (buttons, links) */
+  --color-gold: #E4C590;        /* Champagne accent / highlights */
+  --color-sky: #EAF2FB;         /* Light blue background sections */
+  --color-ivory: #F9F5EF;       /* Main background */
+
+  /* 🩵 Optional typography (if you want to keep it here) */
+  --font-heading: "Saraswati", serif;
+  --font-subheading: "Ralgine", serif;
+  --font-body: "Gilroy", system-ui, sans-serif;
+  --font-tertiary: "Deutschlander", system-ui, sans-serif;
+
+  /* 💫 Smooth motion curves */
+  --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
+  --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
+
+  /* 🩶 Soft shadow */
+  --shadow-elegant: 0 8px 24px rgba(0, 0, 0, 0.08);
+}

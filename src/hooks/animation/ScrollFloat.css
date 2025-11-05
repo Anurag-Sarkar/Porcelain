@@ -1,0 +1,17 @@
+.scroll-float {
+    overflow: hidden;
+}
+
+.scroll-float-text {
+    display: inline-block;
+    font-size: clamp(3rem, 8vw, 10rem);
+    text-align: center;
+    line-height: 1.5;
+    word-break: break-word;
+    white-space: normal;
+}
+
+.char {
+    display: inline-block;
+    white-space: pre;
+}
