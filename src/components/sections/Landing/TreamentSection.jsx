@@ -1,11 +1,15 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, Autoplay } from 'swiper/modules'
+import { useEffect, useRef, useState } from 'react'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import './TreatmentSwiper.css'
 
 const TreamentSection = () => {
+  const swiperRef = useRef(null)
+  const [isReady, setIsReady] = useState(false)
+
   const treatments = [
     { name: 'Micro Needling', image: 'https://images.unsplash.com/photo-1761718209852-54ca4210183e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fHNraW4lMjB0cmVhdG1lbnR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=900' },
     { name: 'Carbon Laser', image: 'https://images.unsplash.com/photo-1761718209793-cb6d348831e0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzZ8fHNraW4lMjB0cmVhdG1lbnR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=900' },
@@ -14,6 +18,19 @@ const TreamentSection = () => {
     { name: 'K18 Peptide', image: 'https://plus.unsplash.com/premium_photo-1661476179686-80c9122da693?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2tpbiUyMHRyZWF0bWVudHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=900' },
     { name: 'Skin Booster', image: 'https://plus.unsplash.com/premium_photo-1664299995993-ebfac0a1b66b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHNraW4lMjB0cmVhdG1lbnR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=900' },
   ]
+
+  // Handle swiper initialization and centering
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsReady(true)
+      if (swiperRef.current && swiperRef.current.swiper) {
+        swiperRef.current.swiper.update()
+        swiperRef.current.swiper.slideTo(0, 0)
+      }
+    }, 100)
+
+    return () => clearTimeout(timer)
+  }, [])
 
   return (
     <section className='mt-20 md:mt-40 pt-12 md:pt-20 border-t mb-32 md:mb-60 border-black/20'>
@@ -24,6 +41,7 @@ const TreamentSection = () => {
       {/* Mobile/Tablet Carousel */}
       <div className='block md:hidden relative w-full'>
         <Swiper
+          ref={swiperRef}
           modules={[Pagination, Autoplay]}
           spaceBetween={20}
           slidesPerView={'auto'}
@@ -31,6 +49,21 @@ const TreamentSection = () => {
           centerInsufficientSlides={true}
           loop={false}
           initialSlide={0}
+          updateOnWindowResize={true}
+          observeParents={true}
+          observer={true}
+          onSwiper={(swiper) => {
+            setTimeout(() => {
+              swiper.update()
+              swiper.slideTo(0, 0)
+            }, 50)
+          }}
+          onInit={(swiper) => {
+            setTimeout(() => {
+              swiper.update()
+              swiper.slideTo(0, 0)
+            }, 50)
+          }}
           pagination={{
             clickable: true,
             dynamicBullets: false,
@@ -68,7 +101,7 @@ const TreamentSection = () => {
                   </svg>
                 </div>
 
-                <div className="aspect-[2/3] h-[28rem] md:h-[35rem] overflow-hidden rounded-lg">
+                <div className="aspect-[2/3] h-[24rem] md:h-[35rem] overflow-hidden rounded-lg">
                   <img
                     src={treatment.image}
                     alt={`${treatment.name} treatment`}
